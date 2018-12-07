@@ -10,6 +10,5 @@ puts
 
 puts "Starting game"
 puts 
-
 game = Game.new(Player.new(p1_name), Player.new(p2_name))
 game.play
