@@ -1,3 +1,3 @@
 require "./game.rb"
 
-Game.new.play
+Game.new
