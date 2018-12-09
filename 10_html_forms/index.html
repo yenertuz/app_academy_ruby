@@ -60,6 +60,29 @@
 <li>Garnish with the chopped parsley, if desired. Shakshuka can be eaten for breakfast, lunch, or dinner. For breakfast, serve with warm crusty bread or pita that can be dipped into the sauce (if youâ€™re gluten-intolerant or celebrating Passover, skip the bread). For dinner, serve with a green side salad for a light, easy meal.</li>
 </ol>
 </section>
+<section>
+	<form>
+		<label for="reviewer_name">Name: </label>
+		<input id="reviewer_name" type="text" ><br>
+		<label for="rating5">Rating: </label>
+		<input type="radio" id="rating5" name="rating" value="5"> 5
+		<input type="radio" id="rating4" name="rating" value="4"> 4
+		<input type="radio" id="rating3" name="rating" value="3"> 3
+		<input type="radio" id="rating2" name="rating" value="2"> 2
+		<input type="radio" id="rating1" name="rating" value="1" checked="true"> 1 <br>
+		<label for="expertise" > Cooking Expertise: </label>
+		<select>
+			<option disabled="true" selected="true" >Select Cooking Expertise</option>
+			<option>Sometimes Cook</option>
+			<option>Cook Everyday</option>
+			<option>Cooking is a Hobby</option>
+			<option>Professional Chef</option>
+		</select> <br> 
+		<label>Review: 
+			<textarea id="textarea1" onclick="this.innerHTML='';">Enter review here.</textarea>
+		</label>
+	</form>
+</section>
 <footer><p class="w3-center">Orignal Recipe by IDK</p></footer>
 </body>
 </html>
