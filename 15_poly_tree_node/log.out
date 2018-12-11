@@ -1,0 +1,39 @@
+
+PolyTreeNode
+  #initialize
+    should set an initial value
+    should set parent to nil
+    should set children to an empty array
+  #parent=
+    should set a node's parent to the passed node
+    should add the child node to the passed node's children
+    does not add the same node twice
+    handles nil without issue
+    when reassigning
+      should set the node's parent to the new parent
+      should add the node to the new parent's children
+      should remove the node from its old parent's children
+  #add_child
+    should pass itself to the child's #parent=
+    doesn't add the child twice
+  #remove_child
+    should pass nil to the child's #parent=
+    should raise an error if node is not a child
+
+Searchable
+  #dfs
+    should take correct path to descendant
+    behaves like search method
+      should return itself if it contains the value
+      should find descendant
+      should return nil when value is not found
+  #bfs
+    should take correct path to descendant
+    behaves like search method
+      should return itself if it contains the value
+      should find descendant
+      should return nil when value is not found
+
+Finished in 0.0225 seconds (files took 0.16024 seconds to load)
+22 examples, 0 failures
+
