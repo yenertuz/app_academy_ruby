@@ -34,6 +34,3 @@ class Tile
 	end
 
 end
-
-test = Tile.new([0,0], :nil)
-p test.char
