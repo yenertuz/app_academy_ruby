@@ -2,6 +2,8 @@ class Player
 
 	@@counter = 1
 
+	attr_reader :number, :name
+
 	def initialize(name)
 		@name = name
 		@number = @@counter

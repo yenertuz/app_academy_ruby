@@ -2,7 +2,7 @@ require "./player.rb"
 
 class Tile
 
-	attr_reader :char
+	attr_reader :char, :output, :type, :player
 
 	CHAR_MAP = {
 		king: "♚",
@@ -19,6 +19,7 @@ class Tile
 		@column = poz[1]
 		@type = type
 		@char = CHAR_MAP[@type]
+		@output = @char
 		@player = player
 		self.get_char
 	end
@@ -31,6 +32,23 @@ class Tile
 		elsif @player.number == 2
 			@char = @char.blue
 		end
+		@output = @char
+	end
+
+	def place_cursor
+		@output = @char.reverse_color if @output == @char
+	end
+
+	def place_select
+		@output = @char.no_colors.yellow
+	end
+
+	def remove_select
+		@output = @char
+	end
+
+	def remove_cursor
+		@output = @char if @output == @char.reverse_color
 	end
 
 end
