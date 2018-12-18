@@ -55,6 +55,29 @@ KEYMAP = {
   "\u0003" => :ctrl_c,
 }
 
+MOVES = {
+  left: [0, -1],
+  right: [0, 1],
+  up: [-1, 0],
+  down: [1, 0]
+}
+
+class Cursor
+
+  attr_reader :cursor_pos, :board
+
+  def initialize(cursor_pos, board)
+    @cursor_pos = cursor_pos
+    @board = board
+  end
+
+  def get_input
+    key = KEYMAP[read_char]
+    handle_key(key)
+  end
+
+  private
+
   def read_char
     STDIN.echo = false # stops the console from printing return values
 
@@ -83,3 +106,10 @@ KEYMAP = {
 
     return input
   end
+
+  def handle_key(key)
+  end
+
+  def update_pos(diff)
+  end
+end
