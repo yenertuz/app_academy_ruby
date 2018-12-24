@@ -3,12 +3,13 @@ class Fixnum
 end
 
 class Array
+
+
   def hash
-	result = self.length
-	self.each do |x|
-		result = result << x
-	end
-	result
+	return 0.hash if self.length == 0
+	sub_result = self.reduce { |sum, num|  (sum << 5) + num  }
+	to_hash = self.length ^ sub_result
+	sub_result.hash
   end
 end
 
