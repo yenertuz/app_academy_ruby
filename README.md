@@ -1,4 +1,4 @@
-# App_Academy_Ruby
+# App Academy - Ruby
 
 Gif of the Chess project
 
